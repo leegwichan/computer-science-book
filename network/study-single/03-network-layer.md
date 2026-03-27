@@ -57,3 +57,10 @@
     - OSPF(Open Shortest Path First) : 링크 상태 기반의 프로토콜. 네트워크 전체의 지도를 그리는 LSDB(링크 상태 DB)를 구축한 뒤, 회선의 대역폭(속도)을 바탕으로 메트릭을 계산하여 가장 빠르고 효율적인 경로를 선택
   - EFP(Exterior Gateway Protocol)
     - BGP(Border Gateway Protocol) : 인터넷을 구성하는 핵심 프로토콜로 AS 간의 라우팅에 사용. 단순히 거리나 속도만 보는 것이 아니라, 관리자의 보안 정책과 다양한 속성을 복합적으로 고려하여 경로를 결정
+
+### 네트워크 계층의 한계
+- 비신뢰성 프로토콜(unrealiable protocol) : IP 프로토콜이 패킷이 수신지까지 제대로 전송되었다는 보장을 하지 않는 특징
+- 비연결형 프로토콜(connectionless protocol) : 송수신 호스트 간에 사전 연결 수립 작업을 거치지 않음
+- ICMP(Internet Control Message Protocol) : IP 패킷의 전송 과정에 대한 피드백 메시지를 얻기 위해 사용하는 네트워크 계층 프로토콜
+  - ICMP 메시지 종류 : 전송 과정에서 발생한 문제 상황에 대한 오류 보고, 네트워크에 대한 진단 정보
+  - 위 특성을 보완하기 위한 도우미 역할을 할 뿐, 신뢰성을 보장하지 않음
